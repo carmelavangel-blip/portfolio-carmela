@@ -100,7 +100,6 @@ body {
   left: 0;
   bottom: 0;
   z-index: 1;
-  margin-bottom: 5rem;
 
   object-fit: cover;
   transition: transform 0.4s ease;
@@ -132,34 +131,31 @@ body {
 /* CONTENEDOR DE LA LÍNEA */
 
 .linea-horizontal {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: white;
   border-top: 1px solid rgb(100, 100, 100);
   border-bottom: 1px solid rgb(100, 100, 100);
   overflow: hidden;
   padding: 12px 0;
-  z-index: 10;
 }
 
 /* TEXTO */
 
 .texto-movimiento {
-  display: inline-block;
-  /* 
+  display: flex;
+  gap: 30px;
   white-space: nowrap;
   font-size: 14px;
-  letter-spacing: 1px; */
+  letter-spacing: 1px;
   animation: moverTexto 12s linear infinite;
 }
 
 /* ANIMACIÓN */
 
 @keyframes moverTexto {
-  /* from {
-    transform: translateX(100%);
-  } */
+  from {
+    transform: translateX(0);
+  }
 
   to {
     transform: translateX(-50%);
@@ -170,7 +166,7 @@ body {
 
 .sobre-mi {
   background-color: rgb(24, 23, 23);
-  padding: 60px 0;
+  padding: 150px 0;
   min-height: 70vh;
 }
 
@@ -197,7 +193,7 @@ body {
   background-color: white;
   color: black;
   text-align: center;
-  padding: 60px 20px;
+  padding: 100px 20px;
 }
 
 .footer h3 {
