@@ -1,0 +1,232 @@
+/* PARAMETROS */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CABECERA */
+
+.cabecera {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+.marca {
+  font-size: 14px;
+  letter-spacing: 1px;
+  letter-spacing: 0.02em;
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.enlace-nav {
+  color: black;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: opacity 0.2s ease;
+}
+
+.enlace-nav:hover {
+  opacity: 0.6;
+}
+
+/* HERO */
+
+.hero {
+  padding: 100px 0;
+  background: #f5f3ee;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+/* TEXTO */
+
+.hero-text {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: "castoro";
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero h2 {
+  font-family: "castoro";
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+/* IMÁGENES */
+
+.hero-images {
+  position: relative;
+  width: 420px;
+  height: 500px;
+}
+
+/* FOTO DE ATRÁS */
+
+.img-back {
+  position: absolute;
+  width: 220px;
+  height: 300px;
+  cursor: pointer;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 5rem;
+
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.img-back:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+/* FOTO MIA */
+
+.img-front {
+  position: absolute;
+  width: 280px;
+  height: 380px;
+  object-fit: cover;
+  top: -20px;
+  right: 0;
+  z-index: 2;
+
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.img-front:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+/* CONTENEDOR DE LA LÍNEA */
+
+.linea-horizontal {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(100, 100, 100);
+  overflow: hidden;
+  padding: 12px 0;
+  z-index: 10;
+}
+
+/* TEXTO */
+
+.texto-movimiento {
+  display: inline-block;
+  /* 
+  white-space: nowrap;
+  font-size: 14px;
+  letter-spacing: 1px; */
+  animation: moverTexto 12s linear infinite;
+}
+
+/* ANIMACIÓN */
+
+@keyframes moverTexto {
+  /* from {
+    transform: translateX(100%);
+  } */
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* SOBRE MÍ */
+
+.sobre-mi {
+  background-color: rgb(24, 23, 23);
+  padding: 60px 0;
+  min-height: 70vh;
+}
+
+.sobre-mi h2 {
+  font-family: "castoro";
+  color: #f5f3ee;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.sobre-mi p {
+  color: #f5f3ee;
+  max-width: 800px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* FOOTER */
+
+.footer {
+  opacity: 0.7;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.footer h3 {
+  font-family: "castoro";
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* LINKS */
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.6;
+}
