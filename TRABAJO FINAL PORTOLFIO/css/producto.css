@@ -1,0 +1,219 @@
+/* ===================== PRODUCTO ===================== */
+
+.proyectos-grafico {
+  background-color: #f5f3ee;
+  padding: 100px 0;
+}
+
+/* ===================== TITULO ===================== */
+
+.titulo-seccion {
+  margin-bottom: 120px;
+}
+
+.titulo-seccion h1 {
+  font-family: "castoro";
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.titulo-seccion p {
+  font-size: 20px;
+  max-width: 700px;
+  letter-spacing: 0.5px;
+}
+
+/* ===================== PROYECTO ===================== */
+
+.proyecto {
+  margin-bottom: 180px;
+}
+
+/* INFO */
+
+.info-proyecto {
+  margin-bottom: 50px;
+}
+
+.info-proyecto h2 {
+  font-family: "castoro";
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* CATEGORIA */
+
+.categoria {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+/* DESCRIPCIÓN */
+
+.descripcion {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ===================== GALERIA ===================== */
+
+/* GALERÍA */
+
+.galeria-proyecto {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  max-width: 900px;
+
+  margin-left: 0;
+}
+
+/* CAJAS IMAGEN */
+
+.caja-imagen {
+  width: 100%;
+
+  overflow: hidden;
+
+  line-height: 0;
+}
+
+/* IMAGEN */
+
+.caja-imagen img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+
+  cursor: pointer;
+}
+
+.caja-imagen img:hover {
+  transform: scale(1.03);
+}
+
+/* ===================== GALERÍA HORIZONTAL ===================== */
+
+.galeria-horizontal {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+
+  margin-top: 25px;
+
+  max-width: 900px;
+}
+
+/* CAJA */
+
+.caja-horizontal {
+  width: 100%;
+
+  overflow: hidden;
+
+  background-color: rgb(230, 230, 230);
+}
+
+/* IMAGEN */
+
+.caja-horizontal img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.5s ease;
+
+  cursor: pointer;
+}
+
+.caja-horizontal img:hover {
+  transform: scale(1.02);
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 992px) {
+  .titulo-seccion h1 {
+    font-size: 3rem;
+  }
+
+  .info-proyecto h2 {
+    font-size: 2rem;
+  }
+
+  .descripcion {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria-proyecto {
+    grid-template-columns: 1fr;
+  }
+
+  .titulo-seccion {
+    margin-bottom: 80px;
+  }
+
+  .proyecto {
+    margin-bottom: 120px;
+  }
+
+  .titulo-seccion h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================== LINEA ANIMACIÓN ===================== */
+
+.linea-horizontal {
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(100, 100, 100);
+  overflow: hidden;
+  padding: 12px 0;
+  margin-bottom: 5rem;
+}
+
+/* TEXTO */
+
+.texto-movimiento {
+  display: flex;
+  gap: 80px;
+  white-space: nowrap;
+  font-size: 14px;
+  letter-spacing: 1px;
+  animation: moverTexto 12s linear infinite;
+}
+
+/* ANIMACIÓN */
+
+@keyframes moverTexto {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
