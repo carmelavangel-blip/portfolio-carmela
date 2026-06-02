@@ -163,13 +163,13 @@
   .descripcion {
     font-size: 17px;
   }
+
+  .galeria-proyecto {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
-  .galeria-proyecto {
-    grid-template-columns: 1fr;
-  }
-
   .titulo-seccion {
     margin-bottom: 80px;
   }
@@ -180,6 +180,39 @@
 
   .titulo-seccion h1 {
     font-size: 2.5rem;
+  }
+
+  .galeria-proyecto {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .galeria-horizontal {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-proyecto {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .titulo-seccion h1 {
+    font-size: 2rem;
+  }
+
+  .titulo-seccion p {
+    font-size: 16px;
+  }
+
+  .info-proyecto h2 {
+    font-size: 1.6rem;
+  }
+
+  .descripcion {
+    font-size: 15px;
+    line-height: 1.6;
   }
 }
 
