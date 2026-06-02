@@ -226,3 +226,141 @@ body {
 .footer-links a:hover {
   opacity: 0.6;
 }
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-images {
+    width: 340px;
+    height: 420px;
+  }
+
+  .img-front {
+    width: 240px;
+    height: 320px;
+  }
+
+  .img-back {
+    width: 180px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecera .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .enlace-nav {
+    margin-left: 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-images {
+    width: 280px;
+    height: 340px;
+  }
+
+  .img-front {
+    width: 200px;
+    height: 270px;
+  }
+
+  .img-back {
+    width: 150px;
+    height: 210px;
+  }
+
+  .sobre-mi {
+    padding: 100px 20px;
+  }
+
+  .sobre-mi h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-mi p {
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-back {
+    display: none;
+  }
+
+  .img-front {
+    position: static;
+    width: 220px;
+    height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .marca {
+    font-size: 12px;
+  }
+
+  .enlace-nav {
+    font-size: 12px;
+  }
+}
