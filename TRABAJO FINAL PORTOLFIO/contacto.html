@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contacto | Carmela Vega</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- CSS CONTACTO -->
+    <link rel="stylesheet" href="css/contacto.css" />
+
+    <!-- JavaScript -->
+    <script src="Js/script.js" defer></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ===================== CABECERA ===================== -->
+
+    <header class="cabecera">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="marca"> PORTFOLIO DE DISEÑO </a>
+
+        <nav>
+          <a href="index.html#grafico" class="enlace-nav">GRÁFICO</a>
+
+          <a href="index.html#producto" class="enlace-nav">PRODUCTO</a>
+
+          <a href="index.html#interiores" class="enlace-nav">INTERIORES</a>
+
+          <a href="contacto.html" class="enlace-nav">CONTACTO</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===================== CONTACTO ===================== -->
+
+    <section id="contacto-seccion" class="seccion-contacto">
+      <div class="container">
+        <header class="seccion-encabezado">
+          <h1>Contáctame para más info ;)</h1>
+
+          <p>Te respondemos en menos de 48 horas.</p>
+        </header>
+
+        <!-- ===================== FORMULARIO ===================== -->
+
+        <form id="contacto" class="formulario" novalidate>
+          <div class="mb-4">
+            <label for="nombre" class="form-label"> Nombre </label>
+
+            <input type="text" id="nombre" class="form-control" />
+
+            <div id="error-nombre" class="invalid-feedback"></div>
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="form-label"> Email </label>
+
+            <input type="email" id="email" class="form-control" />
+
+            <div id="error-email" class="invalid-feedback"></div>
+          </div>
+
+          <div class="mb-4">
+            <label for="mensaje" class="form-label"> Mensaje </label>
+
+            <textarea id="mensaje" class="form-control" rows="7"></textarea>
+
+            <div id="error-mensaje" class="invalid-feedback"></div>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

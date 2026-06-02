@@ -1,0 +1,97 @@
+/* ===================== CONTACTO ===================== */
+
+.seccion-contacto {
+  background-color: #f5f3ee;
+  min-height: 100vh;
+  padding: 120px 0;
+}
+
+/* ===================== ENCABEZADO ===================== */
+
+.seccion-encabezado {
+  margin-bottom: 60px;
+}
+
+.seccion-encabezado h1 {
+  font-family: "castoro";
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.seccion-encabezado p {
+  font-size: 20px;
+  color: black;
+  letter-spacing: 0.5px;
+}
+
+/* ===================== FORMULARIO ===================== */
+
+.formulario {
+  max-width: 100%;
+}
+
+/* LABELS */
+
+.form-label {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: black;
+}
+
+/* INPUTS */
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid rgb(210, 210, 210);
+  padding: 16px;
+  background-color: white;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: black;
+  background-color: transparent;
+}
+
+/* TEXTAREA */
+
+textarea.form-control {
+  resize: none;
+}
+
+/* ===================== BOTON ===================== */
+
+.btn-enviar {
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 12px 28px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .seccion-contacto {
+    padding: 80px 0;
+  }
+
+  .seccion-encabezado h1 {
+    font-size: 2.8rem;
+  }
+
+  .seccion-encabezado p {
+    font-size: 18px;
+  }
+}
