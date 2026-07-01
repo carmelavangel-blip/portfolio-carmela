@@ -1,86 +1,122 @@
-/* ===================== CONTACTO ===================== */
+/* CONTACTO */
 
 .seccion-contacto {
-  background-color: #f5f3ee;
+  background: #f5f3ee;
   min-height: 100vh;
   padding: 120px 0;
 }
 
-/* ===================== ENCABEZADO ===================== */
+/* ENCABEZADO */
 
 .seccion-encabezado {
   margin-bottom: 60px;
 }
 
 .seccion-encabezado h1 {
-  font-family: "castoro";
+  font-family: "Castoro", serif;
   font-size: 3.5rem;
   font-weight: 400;
-  margin-bottom: 15px;
   color: black;
+  margin-bottom: 15px;
 }
 
 .seccion-encabezado p {
+  max-width: 700px;
   font-size: 20px;
   color: black;
   letter-spacing: 0.5px;
 }
 
-/* ===================== FORMULARIO ===================== */
+/* DATOS */
+
+.datos-contacto {
+  margin-bottom: 50px;
+}
+
+.datos-contacto p {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.datos-contacto strong {
+  font-weight: 600;
+}
+
+/* FORMULARIO */
 
 .formulario {
-  max-width: 100%;
+  max-width: 700px;
 }
 
 /* LABELS */
 
 .form-label {
+  color: black;
   font-size: 16px;
   margin-bottom: 12px;
-  color: black;
 }
 
 /* INPUTS */
 
 .form-control {
-  border-radius: 0;
+  background: white;
   border: 1px solid rgb(210, 210, 210);
+  border-radius: 0;
   padding: 16px;
-  background-color: white;
   font-size: 16px;
 }
 
 .form-control:focus {
-  box-shadow: none;
+  background: white;
   border-color: black;
-  background-color: transparent;
+  box-shadow: none;
 }
-
-/* TEXTAREA */
 
 textarea.form-control {
   resize: none;
 }
 
-/* ===================== BOTON ===================== */
+/* BOTÓN ENVIAR */
 
 .btn-enviar {
+  display: inline-block;
   margin-top: 10px;
-  background-color: white;
+  padding: 12px 28px;
+  background: white;
   border: 1px solid black;
   color: black;
-  padding: 12px 28px;
   font-size: 14px;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .btn-enviar:hover {
-  background-color: black;
+  background: black;
   color: white;
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* BOTÓN VOLVER */
+
+.text-center {
+  margin-top: 5rem;
+}
+
+.boton-principal {
+  display: inline-block;
+  padding: 14px 30px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.boton-principal:hover {
+  background: black;
+  color: white;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
   .seccion-contacto {
@@ -93,5 +129,29 @@ textarea.form-control {
 
   .seccion-encabezado p {
     font-size: 18px;
+  }
+
+  .datos-contacto p {
+    font-size: 16px;
+  }
+
+  .formulario {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .seccion-encabezado h1 {
+    font-size: 2.2rem;
+  }
+
+  .seccion-encabezado p {
+    font-size: 16px;
+  }
+
+  .btn-enviar,
+  .boton-principal {
+    width: 100%;
+    text-align: center;
   }
 }

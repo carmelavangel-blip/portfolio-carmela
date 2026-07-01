@@ -7,66 +7,78 @@
 
     <title>Contacto | Carmela Vega</title>
 
-    <!-- Bootstrap 5.3 -->
+    <!-- Bootstrap -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- CSS GENERAL -->
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS -->
 
-    <!-- CSS CONTACTO -->
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contacto.css" />
 
     <!-- JavaScript -->
-    <script src="Js/script.js" defer></script>
+
+    <script src="js/script.js" defer></script>
 
     <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <!-- ===================== CABECERA ===================== -->
+    <!-- CABECERA -->
 
     <header class="cabecera">
       <div class="container d-flex justify-content-between align-items-center">
-        <a href="index.html" class="marca"> PORTFOLIO DE DISEÑO </a>
+        <a href="index.html" class="marca">PORTFOLIO DE DISEÑO</a>
 
         <nav>
-          <a href="index.html#grafico" class="enlace-nav">GRÁFICO</a>
+          <a href="grafico.html" class="enlace-nav">GRÁFICO</a>
 
-          <a href="index.html#producto" class="enlace-nav">PRODUCTO</a>
+          <a href="producto.html" class="enlace-nav">PRODUCTO</a>
 
-          <a href="index.html#interiores" class="enlace-nav">INTERIORES</a>
+          <a href="interiores.html" class="enlace-nav">INTERIORES</a>
 
           <a href="contacto.html" class="enlace-nav">CONTACTO</a>
         </nav>
       </div>
     </header>
 
-    <!-- ===================== CONTACTO ===================== -->
+    <!-- CONTACTO -->
 
     <section id="contacto-seccion" class="seccion-contacto">
       <div class="container">
         <header class="seccion-encabezado">
-          <h1>Contáctame para más info ;)</h1>
+          <h1>Contáctame</h1>
 
-          <p>Te respondemos en menos de 48 horas.</p>
+          <p>
+            Si quieres conocer más sobre mi trabajo o colaborar en algún
+            proyecto, estaré encantada de hablar contigo. Intentaré responderte
+            en menos de 48 horas.
+          </p>
         </header>
 
-        <!-- ===================== FORMULARIO ===================== -->
+        <div class="datos-contacto">
+          <p><strong>Email:</strong> carmelavega@email.com</p>
+
+          <p><strong>Ubicación:</strong> Madrid, España</p>
+        </div>
+
+        <!-- FORMULARIO -->
 
         <form id="contacto" class="formulario" novalidate>
           <div class="mb-4">
-            <label for="nombre" class="form-label"> Nombre </label>
+            <label for="nombre" class="form-label">Nombre</label>
 
             <input type="text" id="nombre" class="form-control" />
 
@@ -74,7 +86,7 @@
           </div>
 
           <div class="mb-4">
-            <label for="email" class="form-label"> Email </label>
+            <label for="email" class="form-label">Correo electrónico</label>
 
             <input type="email" id="email" class="form-control" />
 
@@ -82,7 +94,7 @@
           </div>
 
           <div class="mb-4">
-            <label for="mensaje" class="form-label"> Mensaje </label>
+            <label for="mensaje" class="form-label">Mensaje</label>
 
             <textarea id="mensaje" class="form-control" rows="7"></textarea>
 
@@ -91,6 +103,12 @@
 
           <button type="submit" class="btn-enviar">Enviar mensaje</button>
         </form>
+
+        <div class="text-center mt-5">
+          <a href="index.html" class="boton-principal">
+            ← Volver al portfolio
+          </a>
+        </div>
       </div>
     </section>
   </body>
