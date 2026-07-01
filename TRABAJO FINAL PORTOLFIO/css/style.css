@@ -1,6 +1,8 @@
 /* PARAMETROS */
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -13,7 +15,6 @@ body {
   background: var(--color-fondo);
   color: var(--color-texto);
   line-height: 1.5;
-  margin: 0;
 }
 
 /* CABECERA */
@@ -21,14 +22,18 @@ body {
 .cabecera {
   padding: 1.5rem 0;
   border-bottom: 1px solid rgb(100, 100, 100);
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .marca {
   font-size: 14px;
-  letter-spacing: 1px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   color: var(--color-acento);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .enlace-nav {
@@ -36,8 +41,8 @@ body {
   text-decoration: none;
   margin-left: 1.5rem;
   font-size: 14px;
-  letter-spacing: 1px;
-  transition: opacity 0.2s ease;
+  letter-spacing: 0.08em;
+  transition: opacity 0.3s ease;
 }
 
 .enlace-nav:hover {
@@ -47,11 +52,12 @@ body {
 /* HERO */
 
 .hero {
-  padding: 100px 0;
   background: #f5f3ee;
-  overflow: hidden;
-  position: relative;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0;
 }
 
 .hero-content {
@@ -61,28 +67,41 @@ body {
   gap: 80px;
 }
 
-/* TEXTO */
-
 .hero-text {
-  max-width: 700px;
+  max-width: 650px;
 }
 
 .hero h1 {
-  font-family: "castoro";
+  font-family: "Castoro", serif;
   font-size: 4rem;
-  margin-bottom: 10px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-family: "castoro";
+  font-family: "Castoro", serif;
   font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
-/* IMÁGENES */
+/* BOTON */
+
+.boton-principal {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.boton-principal:hover {
+  background: black;
+  color: white;
+}
+
+/* IMAGENES */
 
 .hero-images {
   position: relative;
@@ -90,67 +109,54 @@ body {
   height: 500px;
 }
 
-/* FOTO DE ATRÁS */
-
 .img-back {
   position: absolute;
-  width: 220px;
-  height: 300px;
-  cursor: pointer;
   left: 0;
   bottom: 0;
-  z-index: 1;
-
+  width: 220px;
+  height: 300px;
   object-fit: cover;
+  z-index: 1;
   transition: transform 0.4s ease;
 }
 
 .img-back:hover {
-  transform: scale(1.03) translateY(-10px);
+  transform: translateY(-10px);
 }
-
-/* FOTO MIA */
 
 .img-front {
   position: absolute;
+  top: -20px;
+  right: 0;
   width: 280px;
   height: 380px;
   object-fit: cover;
-  top: -20px;
-  right: 0;
   z-index: 2;
-
   transition: transform 0.4s ease;
-  cursor: pointer;
 }
 
 .img-front:hover {
-  transform: scale(1.03) translateY(-10px);
+  transform: translateY(-10px);
 }
 
-/* CONTENEDOR DE LA LÍNEA */
+/* LINEA ANIMADA */
 
 .linea-horizontal {
   width: 100%;
-  background-color: white;
+  overflow: hidden;
+  background: white;
   border-top: 1px solid rgb(100, 100, 100);
   border-bottom: 1px solid rgb(100, 100, 100);
-  overflow: hidden;
   padding: 12px 0;
 }
-
-/* TEXTO */
 
 .texto-movimiento {
   display: flex;
   gap: 30px;
   white-space: nowrap;
   font-size: 14px;
-  letter-spacing: 1px;
   animation: moverTexto 12s linear infinite;
 }
-
-/* ANIMACIÓN */
 
 @keyframes moverTexto {
   from {
@@ -161,17 +167,16 @@ body {
     transform: translateX(-50%);
   }
 }
-
-/* SOBRE MÍ */
+/* SOBRE MI */
 
 .sobre-mi {
-  background-color: rgb(24, 23, 23);
+  background: rgb(24, 23, 23);
   padding: 150px 0;
   min-height: 70vh;
 }
 
 .sobre-mi h2 {
-  font-family: "castoro";
+  font-family: "Castoro", serif;
   color: #f5f3ee;
   font-size: 3rem;
   margin-bottom: 40px;
@@ -186,30 +191,121 @@ body {
   font-weight: 300;
 }
 
+/* PROYECTOS */
+
+.proyectos {
+  padding: 120px 0;
+  background: white;
+}
+
+.proyectos h2 {
+  font-family: "Castoro", serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.proyectos p {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+/* FILTROS */
+
+.filtros {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.btn-filtro {
+  padding: 10px 22px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-filtro:hover,
+.btn-filtro.activo {
+  background: black;
+  color: white;
+}
+
+/* GALERIA */
+
+.galeria-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+.tarjeta-proyecto {
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+  transform: translateY(-8px);
+}
+
+.tarjeta-proyecto img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.tarjeta-proyecto h3 {
+  font-family: "Castoro", serif;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-proyecto p {
+  margin-bottom: 15px;
+}
+
+.tarjeta-proyecto a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tarjeta-proyecto a:hover {
+  opacity: 0.6;
+}
+
+/* ANIMACIONES */
+
+.aparecer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+
+.aparecer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* FOOTER */
 
 .footer {
-  opacity: 0.7;
-  background-color: white;
+  background: white;
   color: black;
   text-align: center;
   padding: 100px 20px;
+  opacity: 0.7;
 }
 
 .footer h3 {
-  font-family: "castoro";
+  font-family: "Castoro", serif;
   font-size: 2rem;
   margin-bottom: 15px;
 }
 
-/* TEXTO */
-
 .footer p {
-  font-size: 1rem;
   margin-bottom: 30px;
 }
-
-/* LINKS */
 
 .footer-links {
   display: flex;
@@ -218,7 +314,7 @@ body {
 }
 
 .footer-links a {
-  color: #000000;
+  color: black;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
@@ -271,7 +367,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .enlace-nav {
@@ -279,18 +375,18 @@ body {
   }
 
   .hero {
-    min-height: auto;
     padding: 80px 20px;
+    min-height: auto;
   }
 
   .hero-content {
     flex-direction: column;
-    text-align: center;
     gap: 40px;
+    text-align: center;
   }
 
   .hero h1 {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 
   .hero h2 {
@@ -316,12 +412,17 @@ body {
     padding: 100px 20px;
   }
 
-  .sobre-mi h2 {
+  .sobre-mi h2,
+  .proyectos h2 {
     font-size: 2rem;
   }
 
   .sobre-mi p {
     font-size: 1rem;
+  }
+
+  .filtros {
+    justify-content: center;
   }
 
   .footer-links {
@@ -333,9 +434,9 @@ body {
 @media (max-width: 480px) {
   .hero-images {
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
+    height: auto;
   }
 
   .img-back {
@@ -356,10 +457,7 @@ body {
     font-size: 1rem;
   }
 
-  .marca {
-    font-size: 12px;
-  }
-
+  .marca,
   .enlace-nav {
     font-size: 12px;
   }
